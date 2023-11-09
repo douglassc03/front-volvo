@@ -1,20 +1,17 @@
   import { CardContent, Card, Text, Spacer } from "vcc-ui"
+  import { Car } from "../types/car.interface"
   
   
   interface Cardprops{
-        "id": string
-        "modelName": string
-        "bodyType": string
-        "modelType": string
-        "imageUrl": string
+        car: Car
   }
 
   export function CarCard(proops:Cardprops){
     return(
-        <Card href={"/learn" + proops.id}>
+        <Card href={"/learn" + proops.car.id}>
          <CardContent>
-            <Text subStyle="emphasis">{proops.bodyType}</Text>
-            <Text variant="ootah">{proops.modelName}</Text>
+            <Text subStyle="emphasis">{proops.car.bodyType}</Text>
+            <Text variant="ootah">{proops.car.modelName}</Text>
             <Spacer /> 
             <Text>This is a is a link that will take you to volvocars.com</Text>
         </CardContent>
