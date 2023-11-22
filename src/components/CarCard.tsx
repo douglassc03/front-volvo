@@ -10,7 +10,7 @@
   export function CarCard({car} : Cardprops){
     return(
         <Card href={"/learn" + car?.id}>
-         <CardContent>
+         <div className={styles.cardWrapper}>
             <Text variant="bates" subStyle="emphasis">{car?.bodyType}</Text>
             <Flex extend={{
                     justifyContent: 'flex-start',
@@ -36,7 +36,7 @@
                   LEARN
                 </Link>
             </Flex>
-        </CardContent>
+            </div>
       </Card>
     ) 
   }
