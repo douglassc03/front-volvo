@@ -8,7 +8,7 @@ export function useCars(){
 
     useEffect(() => {
         axios.get("http://localhost:3001/api/cars").then(res => {  
-            setCars(res.data)
+            setCars(prev => [...prev,...res.data])
         })
     },[])
     return {

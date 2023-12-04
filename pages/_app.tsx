@@ -1,4 +1,4 @@
-import { Home } from "../src/components/Home";
+import { Home } from '../src/components/Home/Home';
 import "../public/css/styles.css";
 import React from "react";
 import { StyleProvider, ThemePicker } from 'vcc-ui';
